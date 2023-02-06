@@ -49,7 +49,7 @@ function Person(fullName, money, sleepMood, healthRate){
 
 const person1 = Person ('Ahmed Tahoun',100,"happy",75);
 
-
+// console.log(person1);
 
 person1.Sleep(7);
 person1.Sleep(8);
