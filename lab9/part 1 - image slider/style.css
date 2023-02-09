@@ -1,0 +1,106 @@
+body{
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    width: 100%;
+    height: 60%;
+    /* border: solid black 2px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    background-image: linear-gradient(to right , lightblue , rgba(0, 191, 255, 0.749));
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 30px;
+    width:30%;
+    height: 60%;
+    z-index: 0;
+    /* text-align: center; */
+    font-size: 100px;
+    color: white;
+    order: 4;
+
+}
+.middle{
+    background-image: linear-gradient(to left , lightblue , rgba(0, 191, 255, 0.749));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    width:30%;
+    height: 80%;
+    z-index: 1;
+    font-size: 100px;
+    color: white;
+    order: 3;
+}
+.left{
+    background-image: linear-gradient(to left , lightblue , rgba(0, 191, 255, 0.749));
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    left: 40px;
+    background-color: aqua;
+    width:30%;
+    height: 60%;
+    z-index: 0;
+    font-size: 100px;
+    color: white;
+    order: 2;
+}
+
+
+
+/* Button styling */
+
+
+
+  button:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .previous {
+    border: none;
+    background-color: transparent;
+    color: gray;
+    order: 1;
+    position: relative;
+    left: 70px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    
+
+
+  }
+  
+  .next {
+    border: none ;
+    background-color: transparent;
+    color: gray;
+    order: 5;
+    position: relative;
+    right: 70px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+
+  }
+  
+  .round {
+    border-radius: 50%;
+  }
