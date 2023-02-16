@@ -16,7 +16,18 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
     crossorigin="anonymous"
   />
-  
+  <style>
+    .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      
+    }
+    .todo{
+      font-size: 20px;
+      color: blue;
+    }
+  </style>
 </head>
 
 <body class="bg-success">
@@ -27,6 +38,7 @@
 
     <div id="listContainer" class="listContainer overflow-auto border p-3 rounded  w-50 h-50 mt-4 position-absolute top-0 start-50 translate-middle-x">
     </div>
+    <div class="todo">To do List </div>
 
     <form id="formContainer" class="formContainer position-absolute bottom-0 start-50 translate-middle-x  d-flex " >
       
@@ -42,6 +54,8 @@
   </div>
   
 
+
+
 <script>
 
   var formElement = document.querySelector("#formContainer"),
@@ -55,6 +69,10 @@
   formElement.addEventListener("submit",addTask);
   document.addEventListener("click", done); 
 document.addEventListener("click", remove);
+
+if (localStorage.getItem("tasks") != null) {
+  listContainer.innerHTML = localStorage.getItem("tasks");
+}
   
   function addTask(e){
   if(taskInput.value == ""){
@@ -73,7 +91,10 @@ document.addEventListener("click", remove);
     `;
   
   listContainer.appendChild(task);
+  localStorage.setItem("tasks", listContainer.innerHTML);
   taskInput.value = "";
+
+
   }
 
 
@@ -87,6 +108,8 @@ document.addEventListener("click", remove);
       container.classList.add("done");
       taskText.innerText += "Task Completed";
     }
+
+    localStorage.setItem("tasks", listContainer.innerHTML);
   }
 }
 
@@ -97,6 +120,7 @@ function remove(e) {
   if (e.target.classList.contains("removeButton")) {
     let container = removeButton.parentElement.parentElement;
     container.remove();
+    localStorage.setItem("tasks", listContainer.innerHTML);
   }
 }
   </script>
