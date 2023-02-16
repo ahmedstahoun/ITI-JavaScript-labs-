@@ -15,6 +15,7 @@ lab 10 - todo list with local storage: \
 https://ahmedstahoun.github.io/ITI-JavaScript-labs-/lab10/part2%20-%20todlist%20local%20storage/  \
 lab 10 - formValidator : \
 https://ahmedstahoun.github.io/ITI-JavaScript-labs-/lab10/part1%20-%20form%20validator/Form.html \
-lab 10 - fetching data : 
+lab 10 - fetching data : \
+https://ahmedstahoun.github.io/ITI-JavaScript-labs-/lab10/part3%20-%20fetching/
 
  
